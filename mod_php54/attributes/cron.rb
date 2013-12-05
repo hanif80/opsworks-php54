@@ -8,7 +8,7 @@
                 "hour" :  "*",
                 "month" :  "*",
                 "weekday" :  "*",
-                "command": "cd /srv/www/production_site/current && php app/console memory:leak"
+                "command": "cd /var/www/html/index.php && php app/console memory:leak"
                 },
                 
                 {
@@ -18,7 +18,7 @@
                 "hour" :  "*",
                 "month" :  "*",
                 "weekday" :  "*",
-                "command": "cd /srv/www/production_site/current && php app/console memory:leak" 
+                "command": "cd /var/www/html/index.php && php app/console memory:leak" 
             },
              {
                 // Run every day
@@ -27,7 +27,7 @@
                 "hour" :  "1",
                 "month" :  "1",
                 "weekday" :  "*",
-                "command": "cd /srv/www/production_site/current && php app/console memory:leak"
+                "command": "cd /var/www/html/index.php && php app/console memory:leak"
             },
              {
                 // Run every week
@@ -36,7 +36,7 @@
                 "hour" :  "1",
                 "month" :  "1",
                 "weekday" :  "1",
-                "command": "cd /srv/www/production_site/current && php app/console memory:leak"
+                "command": "cd /var/www/html/index.php && php app/console memory:leak"
             },
               ]
     }
