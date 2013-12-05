@@ -1,5 +1,5 @@
 %w{profile_picture lead_images client_images repair_images purchase_images wish_images sales_images}.each do |dir|
-  directory "/APPLICATION PATH/images/#{dir}" do
+  directory "/var/www/html/images/#{dir}" do
     mode 00775
     owner "root"
     group "root"
@@ -17,7 +17,7 @@ end
                 "hour" :  "*",
                 "month" :  "*",
                 "weekday" :  "*",
-                "command": "cd /srv/www/production_site/current && php app/console memory:leak"
+                "command": "cd /var/www/html/index.php && php app/console memory:leak"
                 },
                 
                 {
@@ -27,7 +27,7 @@ end
                 "hour" :  "*",
                 "month" :  "*",
                 "weekday" :  "*",
-                "command": "cd /srv/www/production_site/current && php app/console memory:leak" 
+                "command": "cd /var/www//html/index.php && php app/console memory:leak" 
             },
              {
                 // Run every day
@@ -36,7 +36,7 @@ end
                 "hour" :  "1",
                 "month" :  "1",
                 "weekday" :  "*",
-                "command": "cd /srv/www/production_site/current && php app/console memory:leak"
+                "command": "cd /var/www/html/index.php && php app/console memory:leak"
             },
              {
                 // Run every week
@@ -45,7 +45,7 @@ end
                 "hour" :  "1",
                 "month" :  "1",
                 "weekday" :  "1",
-                "command": "cd /srv/www/production_site/current && php app/console memory:leak"
+                "command": "cd /var/www/html/index.php && php app/console memory:leak"
             },
               ]
     }
